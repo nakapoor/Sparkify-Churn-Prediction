@@ -80,26 +80,41 @@ Worked on creating new features as mentioned below :
 ### Feature 7: Number of singers user heard.
 ### Target attribute : churn
 
-d) Modeling : 
+### d) Modeling : 
 For modeling purpose, I am using 3 algorithms
+
 a) Logistic regression 
+
 b) DecisionTreeClassifier
+
 c) GBTClassifier
 
-Results as followed :
+
+#### Results as followed :
+
 a) Logistic regression  : 
+
 Precision :  0.25
+
 Recall :  0.17647058823529413
+
 F1 Score :  0.20689655172413793
 
+
 b) DecisionTreeClassifier
+
 Precision :  0.5625
+
 Recall :  0.5294117647058824
+
 F1 Score :  0.5454545454545455
 
 c) GBTClassifier
+
 Precision :  0.5
+
 Recall :  0.47058823529411764
+
 F1 Score :  0.48484848484848486
 
 
