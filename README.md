@@ -8,11 +8,11 @@ The purpose of the project is to understand the users activity data and to ident
 
 These are the below steps taken to achive the purpose.
 
-a) Data preprocessing [ For basic cleanup ]
+## a) Data preprocessing [ For basic cleanup ]
 
 Data contains few points where userid is missing these may be guest users. I am dropping any such data where userid is missing.
 
-b) EDA [Understanding of the Data]
+## b) EDA [Understanding of the Data]
 
 Data set does not contains the target attribute so we need to understand the data and define the target attribute.
 Defining churn : I have tried to identify the action "Cancellation Confirmation" which leads to the cancellation of the the user subscription and marked users with page entry as "Cancellation Confirmation" as churned users.
@@ -67,7 +67,7 @@ df_withchurn.dropDuplicates(["userId", "gender"]).groupby(["churn", "gender"]).c
 
 #### rate of churn is hight for Male members.
 
-c) Feature Engineering [ Identifying and creating new features for model building ]
+## c) Feature Engineering [ Identifying and creating new features for model building ]
 
 Worked on creating new features as mentioned below : 
 
