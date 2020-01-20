@@ -1,9 +1,9 @@
-Sparkify - Udacity capston project.
+# Sparkify - Udacity capston project.
 
-Project Overview : 
+## Project Overview : 
 Sparkify is a music app. The data provided here for the analysiss contains users information while intracting with the app. A user can contain many entries based on his actions. Along with users app activity data, data also shows a section of churned users through the cancellation of the account.
 
-Problem Statement : 
+## Problem Statement : 
 The purpose of the project is to understand the users activity data and to identify the characteristics of churned users from the behavioral data of these users, and take proper measures to retain the potential users who are likely to be churn based on the available data.
 
 These are the below steps taken to achive the purpose.
@@ -34,7 +34,7 @@ df.filter(df.page=="Cancellation Confirmation").select("userId").dropDuplicates(
 |     3|
 +------+
 
-# USer activity for user ID = 125.
+### User activity for user ID = 125.
 df.select(["userId", "page", "time", "level", "song", "sessionId"]).where(df.userId == "125").sort("time").show(50)
 
 +------+--------------------+-------------------+-----+--------------------+---------+
@@ -53,7 +53,7 @@ df.select(["userId", "page", "time", "level", "song", "sessionId"]).where(df.use
 |   125|Cancellation Conf...|2018-10-12 04:35:18| free|                null|      174|
 +------+--------------------+-------------------+-----+--------------------+---------+
 
-# Analysing the gender Distribution between churn user and normal user
+### Analysing the gender Distribution between churn user and normal user
 df_withchurn.dropDuplicates(["userId", "gender"]).groupby(["churn", "gender"]).count().sort("churn").show()
 
 +-----+------+-----+
@@ -65,20 +65,20 @@ df_withchurn.dropDuplicates(["userId", "gender"]).groupby(["churn", "gender"]).c
 | true|     M|   32|
 +-----+------+-----+
 
-# rate of churn is hight for Male members.
+#### rate of churn is hight for Male members.
 
 c) Feature Engineering [ Identifying and creating new features for model building ]
 
 Worked on creating new features as mentioned below : 
 
-# Adding Feature 1: gender as binary.
-#Feature 2: Calculating number of days since registration [ life of a users with app]
-#Feature 3: Total number of sessions/user
-#Feature 4: Calculating avg, min & max time per session [ Time spent by user in app per session]
-# Feature 5: number of songs per session.
-# Feature 6: whether the account is a premium account or a free account
-# Feature 7: Number of singers user heard.
-# Target attribute : churn
+### Adding Feature 1: gender as binary.
+### Feature 2: Calculating number of days since registration [ life of a users with app]
+### Feature 3: Total number of sessions/user
+### Feature 4: Calculating avg, min & max time per session [ Time spent by user in app per session]
+### Feature 5: number of songs per session.
+### Feature 6: whether the account is a premium account or a free account
+### Feature 7: Number of singers user heard.
+### Target attribute : churn
 
 d) Modeling : 
 For modeling purpose, I am using 3 algorithms
