@@ -118,7 +118,7 @@ Recall :  0.47058823529411764
 F1 Score :  0.48484848484848486
 
 
-Conclusion : DecisionTreeClassifier are performing best in all 3 algorithms. Looking at the results I can say that lot of work is required for inproving the predictions further. for improvement I am considering the below 2 approaches
+<b> Conclusion </b> : DecisionTreeClassifier are performing best in all 3 algorithms. Looking at the results I can say that lot of work is required for inproving the predictions further. for improvement I am considering the below 2 approaches
 a) Undersampling to optimize the F1 score.
 b) I will look forward to build ensambling models for this problem.
 
