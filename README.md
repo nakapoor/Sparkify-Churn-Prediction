@@ -8,7 +8,7 @@ Git repository link ==> https://github.com/nakapoor/Sparkify-Churn-Prediction
 Sparkify is a music app. The data provided here for the analysiss contains users information while intracting with the app. A user can contain many entries based on his actions. Along with users app activity data, data also shows a section of churned users through the cancellation of the account.
 
 ## Problem Statement : 
-The purpose of the project is to understand the users activity data and to identify the characteristics of churned users from the behavioral data of these users, and take proper measures to retain the potential users who are likely to be churn based on the available data.
+The purpose of the project is to understand the users activity data and to identify the characteristics of churned users from the behavioral data of these users, and take proper measures to retain the potential users who are likely to be churn based on the available data. It is important to stop the Users Churn as a result the model must be good at capturing True positives for users who are about to churn. Now F1 score conveys the balance between the precision and the recall(True Positive Rate.) as a result we will pick F1 Score as metrics for model performance evaluation. 
 
 These are the below steps taken to achive the purpose.
 
@@ -121,8 +121,29 @@ Recall :  0.47058823529411764
 
 F1 Score :  0.48484848484848486
 
+As we have already discussed that It is important to identify the Users who are about to churn as a result we need model that is good at capturing and reflecting True positives for users who are about to churn and F1 score conveys the balance between the precision and the recall(True Positive Rate.) as a result we will pick F1 Score as metrics for model performance evaluation. 
 
-<b> Conclusion </b> : DecisionTreeClassifier are performing best in all 3 algorithms. Looking at the results I can say that lot of work is required for inproving the predictions further. for improvement I am considering the below 2 approaches
+For this problem we have started with the simplest linear model algorithm Logestic Regression. For logestic regression we saw that the F1 Score is very low so we plan to move to a tree based algorithm and we saw the huge improvement in the evaluation metrics and the F1 Score jumps to 0.55 . Out of curosity I tried with the more advanced algorithm that is GBTClassifier. but from the results we see that DecisionTreeClassifier shows best results for the recall(True Positive Rate) in all 3 algorithms so I preffer to stick to DecisionTreeClassifier for model building.
+
++--------------+----------+-------+---------+
+|Val Results   |Precision |Recall |F1 Score |
++--------------+----------+-------+---------+
+|LR classifiers|  0.2500  | 0.1764| 0.2068  |
+|DT Classifiers|  0.5625  | 0.5294| 0.5454  |
+|GBT Classifier|  0.5000  | 0.4705| 0.4848  |
++--------------+----------+-------+---------+
+
+<b> Conclusion </b> : DecisionTreeClassifier are performing best in all 3 algorithms. Looking at the results I can say that lot of work is required for improving the predictions further. Also Major challage which can be seen is training results through cross-validation is shwing good results , but testing with validation sets is not as good as the training .
+#### For example 
+For LR : 
+training : 0.701
+testing  : 0.250
+
+For DT Classifiers : 
+training : 0.811
+testing  : 0.545
+
+From improvement perspective I am considering the below 2 approaches
 a) Undersampling to optimize the F1 score.
 b) I will look forward to build ensambling models for this problem.
 
