@@ -1,5 +1,9 @@
 # Sparkify - Udacity capston project.
 
+Blog is available at ==> https://medium.com/@kapur_naveen/sparkify-udacity-capstone-project-1e8959772937
+
+Git repository link ==> https://github.com/nakapoor/Sparkify-Churn-Prediction
+
 ## Project Overview : 
 Sparkify is a music app. The data provided here for the analysiss contains users information while intracting with the app. A user can contain many entries based on his actions. Along with users app activity data, data also shows a section of churned users through the cancellation of the account.
 
